@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready (function(){
+            $(".conteudo").show();
+            $("#abas ul li").click(function(){
+                $("#abas ul li").addClass("selecionado");
+                $(this).removeClass("selecionado");
+
+                var meuid = $(this).attr("id");
+                $(".conteudo").show();
+                $("."+meuid).hide();
+
+            });
+        });
+
+
+    </script>
+    <title>Title</title>
+</head>
+<body>
+
+
+<div id="abas">
+    <ul>
+        <li id="aba1" class="selecionado">Aba1</li>
+        <li id="aba2">aba2</li>
+        <li id="aba3">aba3</li>
+    </ul>
+
+    <div id="conteudos">
+
+        <div class="conteudo aba1">
+            Conteudo aba1
+        </div>
+        <div class="conteudo aba2">
+            Conteudo aba2
+        </div>
+        <div class="conteudo aba3">
+            Conteudo aba3
+        </div>
+    </div>
+</body>
+</html>
